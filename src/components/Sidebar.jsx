@@ -1,4 +1,4 @@
-import { Book, Users, Settings, Library } from "lucide-react"; // icon library
+import { Book, Users, Settings, Library, Home } from "lucide-react"; // icon library
 
 export default function Sidebar({ isOpen }) {
   return (
@@ -9,6 +9,9 @@ export default function Sidebar({ isOpen }) {
       </div>
       <ul>
         <li className="sidebar-item sidebar-active">
+          < Home /> Dashboard
+        </li>
+        <li className="sidebar-item">
           <Book /> Books
         </li>
         <li className="sidebar-item">

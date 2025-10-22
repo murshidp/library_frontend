@@ -9,7 +9,10 @@
         const [sidebarOpen, setSidebarOpen] = useState(true);
         
         const checkLogin = () => {
-            if (!auth) navigate("/");
+            const token = localStorage.getItem("access");
+            if (!token) {
+                navigate("/login");
+            }
         };
         
         const toggleSidebar = () => {
@@ -26,7 +29,7 @@
             <Navbar onToggleSidebar={toggleSidebar} />
             <main className="p-6 bg-gray-100 flex-1 overflow-y-auto">
             <h2 className="text-2xl font-semibold mb-6 text-gray-700">
-                Welcome back, Admin 👋
+                Welcome back, {localStorage.getItem("username")} 👋
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="card">

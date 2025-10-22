@@ -3,6 +3,9 @@ import { Menu } from "lucide-react";
 export default function Navbar({ onToggleSidebar }) {
     const logOut = () => {
         localStorage.removeItem("auth");
+        localStorage.removeItem("access");
+        localStorage.removeItem("refresh");
+        localStorage.removeItem("username");
         window.location.href = "/";
     };
   return (
