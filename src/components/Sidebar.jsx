@@ -24,7 +24,7 @@ export default function Sidebar({ isOpen }) {
         <li className="sidebar-item">
           <Book /> Books
         </li>
-        <li className={`sidebar-item ${location.pathname === '/students' ? 'sidebar-active' : ''}`} onClick={studentsClick}>
+        <li className={`sidebar-item ${location.pathname.includes(  '/students') ? 'sidebar-active' : ''}`} onClick={studentsClick}>
           <Users /> Students
         </li>
         <li className="sidebar-item">

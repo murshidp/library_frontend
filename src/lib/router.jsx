@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login";
 import Students from "../pages/Students";
 import Dashboard from "../pages/Dashboard";
+import AddStudents from "../pages/AddStudents";
+import ViewStudentDetail from "../pages/ViewStudent";
 const router =  createBrowserRouter([
     {
         path: "/",
@@ -14,6 +16,14 @@ const router =  createBrowserRouter([
     {
         path: "/students",
         element: <Students />
+    },
+    {
+        path: "/students/new",
+        element: <AddStudents />
+    },
+    {
+        path: "/students/view/:id",
+        element: <ViewStudentDetail />
     }
     
     
